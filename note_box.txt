@@ -9,6 +9,6 @@
 * rvalue. 右值，可以出现在赋值表达式的右边，可能是一个xvalue，一个临时对象，或者还未和对象关联的值。
 * prvalue, pure rvalue. 纯右值不是xvalue的rvalue。例如非引用形式的函数返回值，字面量。
 * static_cast 使用类型转换时优先考虑，有10种场景见cppreference文档。
-* dynamic_cast 安全地转换继承体系中的类型(包括void*)，up or down or sideways转换指针或引用。
+* dynamic_cast 安全地转换继承体系中的类型(包括void*)，up or down or sideways转换指针或引用，转换失败时返回空指针(指针到指针转换时)、或者throw bad_cast(引用到引用转换时)。
 * const_cast 
 * reinterpreter_cast
